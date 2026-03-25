@@ -5,9 +5,9 @@
 // 1. DATABASE SEMENTARA (Simulasi Array Data Produk)
 // Nanti di UAS, data ini akan diambil dari MySQL via CodeIgniter.
 const dataProduk = [
-    { id: 1, nama: "Paket Website Basic", harga: 1500000, icon: "fa-laptop-code" },
-    { id: 2, nama: "Jasa SEO Audit", harga: 800000, icon: "fa-magnifying-glass-chart" },
-    { id: 3, nama: "Manajemen Sosmed", harga: 2500000, icon: "fa-hashtag" }
+    { id: 1, nama: "AI Personal Tutor", harga: 5000000, icon: "fa-robot" },
+    { id: 2, nama: "Latihan Soal Adaptif", harga: 3000000, icon: "fa-brain" },
+    { id: 3, nama: "Analisis Progres Belajar", harga: 1500000, icon: "fa-chart-line" }
 ];
 
 // STATE APLIKASI (Variabel untuk melacak status transaksi)
@@ -88,7 +88,7 @@ function cekPromoOtomatis() {
     // Jika totalKeranjang LEBIH DARI Rp 2.000.000, berikan pesan diskon.
     // Jika tidak, hilangkan pesan diskon/beri pesan upselling.
 
-    if (totalKeranjang > 2000000) {
+    if (totalKeranjang > 5000000) {
         // Tampilkan peringatan promo
         promoAlert.classList.remove('d-none');
         promoAlert.classList.replace('alert-info', 'alert-success');
@@ -97,7 +97,7 @@ function cekPromoOtomatis() {
         // Sembunyikan peringatan jika total turun (opsional untuk keranjang dinamis)
         // Untuk saat ini, kita beri dorongan upselling
         promoAlert.classList.remove('d-none');
-        teksPromo.textContent = `Tambah Rp ${(2000000 - totalKeranjang).toLocaleString('id-ID')} lagi untuk dapat Diskon 10%!`;
+        teksPromo.textContent = `Tambah Rp ${(5000000 - totalKeranjang).toLocaleString('id-ID')} lagi untuk dapat Diskon 10%!`;
     }
 }
 
